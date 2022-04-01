@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+:root {
+  --Play: "Playfair", serif;
+  --Rale: "Raleway", sans-serif;
+  --Rich: #001219;
+  --Saph: #005f73;
+  --Viri: #0a9396;
+  --MidBlue: #94d2bd;
+  --Champagne: #e9d8a6;
+  --Gamboge: #ee9b00;
+  --Alloy: #ca6702;
+  --Rust: #bb3e03;
+  --Rufous: #ae2012;
+  --Ruby: #9b2226;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--Rale);
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+ul li {
+  padding: 12px 8px 12px 40px;
+  background: var(--Viri);
+  color: var(--Champagne);
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 0.2s;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: var(--Saph);
+}
+
+ul li:hover {
+  background: var(--Rich);
+}
+
+ul li.completed {
+  background: var(--Champagne);
+  color: var(--Rich);
+  text-decoration: line-through;
+  text-decoration-color: var(--Saph);
+}
+
+ul li.completed::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+}
+
+.close:hover {
+  background-color: var(--Ruby);
+  color: var(--MidBlue);
+}
+
+
+.header {
+  /* background-color: var(--Rich); */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(images/Ponyo.jpg) center/ cover no-repeat fixed;
+  padding: 100px 40px;
+  color: var(--Champagne);
+  text-align: left;
+  justify-content: space-between;
+}
+
+.header h2 {
+    margin: 25px 0px;
+    font-family: var(--Play);
+    font-size: 50px;
+    font-weight: 200px;
+}
+
+
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 20px;
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#inputTodo::placeholder{
+    color: var(--Ruby);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.newToDoBttn {
+  padding: 10px;
+  width: 20%;
+  background: var(--Viri);
+  color: var(--Rich);
+  float: right;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 20px;
+  font-family: var(--Play);
+  font-weight: 500px;
+}
+
+.newToDoBttn:hover {
+  background-color: var(--MidBlue);
+  color: var(--Champagne);
+}
